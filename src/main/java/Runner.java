@@ -1,9 +1,7 @@
-public class Runner extends Islemler {
+public class Runner {
 
     public static void main(String[] args) {
-
-        programiBaslat();
-
+        Islemler.programiBaslat();
     }
 
 }

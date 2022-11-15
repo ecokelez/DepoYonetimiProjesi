@@ -12,7 +12,7 @@ public class UrunTanimlama {
         this.ad = ad;
         this.uretici = uretici;
         this.birim = birim;
-        this.id = (int) (Math.random() * 1000);
+        this.id = (int) (Math.random() * 100000);
     }
 
     public String getAd() {
@@ -65,10 +65,6 @@ public class UrunTanimlama {
 
     @Override
     public String toString() {
-        return "Urun Ismi='" + ad + '\'' +
-                ", uretici= '" + uretici + '\'' +
-                ", birim= '" + birim + '\'' +
-                ", Miktar= '" + miktar + '\'' +
-                ", raf= '" + raf + '\'' + '\n';
+        return "Urun Ismi='" + ad + '\'' + ", uretici= '" + uretici + '\'' + ", birim= '" + birim + '\'' + ", Miktar= '" + miktar + '\'' + ", raf= '" + raf + '\'' + '\n';
     }
 }
