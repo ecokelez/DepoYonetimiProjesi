@@ -122,13 +122,13 @@ public class UrunIslemleri extends MenuIslemleri {
 
     }
 
-    /*
-     public static void urunCikisiYap() {
+
+    public static void urunCikisiYap() {
 
         System.out.println("==================================== URUN CIKIS EKRANI ====================================");
         System.out.println();
 
-        System.out.println("Lutfen girisi yapilacak urun ID'sini giriniz");
+        System.out.println("Lutfen cikisi yapilacak urun ID'sini giriniz");
         int userID = scan.nextInt();
         UrunIslemleri urun = UrunDatabase.urunIDKontrolEt(userID);
 
@@ -143,9 +143,9 @@ public class UrunIslemleri extends MenuIslemleri {
                 System.out.println("Lutfen cikisini yapmak istediginiz miktari giriniz");
                 int userMiktar = scan.nextInt();
                 if (userMiktar > urun.getMiktar()) {
-                    System.out.println("Su an depomuzda bu miktarda urun bulunmamaktadir.");
+                    System.out.println("Girdiginiz miktar depodaki miktardan fazladir.");
                     System.out.println("Urun Adi: " + urun.getUrunAdi() + " Urunun guncel miktari: " + urun.getMiktar());
-                    System.out.println("Depodaki " + urun.getUreticiAdi() + " ait " + urun.getUrunAdi() + " urununun tamaminin cikisini yapmak istiyorsaniz 'E' tusuna basiniz.\n" +
+                    System.out.println("Depodaki " + urun.getUreticiAdi() + " ureticisine ait " + urun.getUrunAdi() + " urununun tamaminin cikisini yapmak istiyorsaniz 'E' tusuna basiniz.\n" +
                             "Islemi iptal edip Ana Menuye donmek istiyorsaniz '1' tusuna basiniz");
                     String userInput = scan.next();
 
@@ -161,25 +161,24 @@ public class UrunIslemleri extends MenuIslemleri {
                             break;
                         } else {
                             System.out.println("Hatali giris yaptiniz...");
-                            System.out.println("Depodaki " + urun.getUreticiAdi() + " ait " + urun.getUrunAdi() + " urununun tamaminin cikisini yapmak istiyorsaniz 'E' tusuna basiniz.\n" +
+                            System.out.println("Depodaki " + urun.getUreticiAdi() + " ureticisine ait " + urun.getUrunAdi() + " urununun tamaminin cikisini yapmak istiyorsaniz 'E' tusuna basiniz.\n" +
                                     "Islemi iptal edip Ana Menuye donmek istiyorsaniz '1' tusuna basiniz");
                             userInput = scan.next();
                         }
                     } while (true);
-                }else {
+                } else {
                     urun.setMiktar(urun.getMiktar() - userMiktar);
                     System.out.println("Islem basariyla gerceklesitirildi.");
                     System.out.println("Urun Adi: " + urun.getUrunAdi() + " Urunun guncel miktari: " + urun.getMiktar());
                     MenuIslemleri.menuyeDonButonu();
                     break;
                 }
+                break;
             }
 
         } while (true);
 
     }
-
-     */
 
 
     public String getUrunAdi() {

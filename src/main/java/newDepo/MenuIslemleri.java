@@ -3,13 +3,13 @@ package newDepo;
 import java.util.Scanner;
 import java.util.Set;
 
-public class MenuIslemleri{
+public class MenuIslemleri {
 
     static Scanner scan = new Scanner(System.in);
 
     public static void menuyuGoster() {
 
-        System.out.println("==================================== DEPO YONETIM PANELI ====================================\n" +
+        System.out.println("==================================== OZKARDESLER DEPO YONETIM PANELI ====================================\n" +
                 "1- URUN TANIMLAMA EKRANI\n" +
                 "2- URUN LİSTELEME EKRANI\n" +
                 "3- URUN GİRİŞ EKRANI\n" +
@@ -34,9 +34,10 @@ public class MenuIslemleri{
                 UrunIslemleri.rafBelirle();
                 break;
             case 5:
-//                UrunIslemleri.urunCikisiYap();
+                UrunIslemleri.urunCikisiYap();
                 break;
             case 6:
+                programiKapat();
                 break;
             default:
                 System.out.println("Yanlis tusa bastiniz. Tekrar deneyiniz");
@@ -58,6 +59,26 @@ public class MenuIslemleri{
                 secim = scan.next().toUpperCase();
             }
         } while (true);
+    }
+
+    public static void programiKapat() {
+        System.out.println("Sistemi kapatmak istediginize emin misiniz? Eminseniz 'E' tusuna basiniz. Islemi iptal edip Ana Menuye donmek icin '1' tusuna basiniz");
+        String secim = scan.next().toUpperCase();
+        do {
+            if (secim.equals("E")) {
+                System.out.println("OZKARDESLER DEPO YONETIM SISTEMINI KULLANDIGINIZ ICIN TESEKKURLER!");
+                System.out.println("Sistem kapatildi...");
+                break;
+            } else if (secim.equals("1")) {
+                menuyuGoster();
+                break;
+            } else {
+                System.out.println("Hatali giris yaptiniz!");
+                System.out.println("Sistemi kapatmak istediginize emin misiniz? Eminseniz 'E' tusuna basiniz. Islemi iptal edip Ana Menuye donmek icin '1' tusuna basiniz");
+                secim = scan.next().toUpperCase();
+            }
+        } while (true);
+
     }
 }
 

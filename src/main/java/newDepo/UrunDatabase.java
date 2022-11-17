@@ -18,7 +18,7 @@ public class UrunDatabase {
     public static void databasedenUrunleriGoster() {
 
         System.out.println("==================================== URUNLER LISTESI ====================================");
-        System.out.println();
+        System.out.println("");
         for (Map.Entry<Integer, UrunIslemleri> w : urunlerSet) {
             System.out.println("Urun ID: " + w.getKey() + ", " + w.getValue());
         }
